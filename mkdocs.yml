@@ -74,10 +74,10 @@ markdown_extensions:
   - pymdownx.mark # For highlighting text ==like this==
   - pymdownx.critic # For revision markups
   # - pymdownx.superfences: # Enhanced code blocks
-  #     custom_fence:
+  #     custom_fences:
   #       - name: mermaid # For diagrams using Mermaid-JS syntax
   #         class: mermaid
-  #         format: !!python/name:pymdownx.superfences.fence_code_format
+  #         format: !!python/name:mermaid2.fence_mermaid_custom
   - pymdownx.tabbed: # For creating tabbed content
       alternate_style: true
   - pymdownx.highlight: # For syntax highlighting of code
@@ -92,6 +92,7 @@ markdown_extensions:
 # 5. Plugins (RSS, Search, Glossary)
 plugins:
   - search # Built-in client-side search
+  - git-revision-date-localized # Auto date each page from Git
   - rss: # RSS Feed for your news section
       feed_url: /feed.xml # Path to your RSS feed file (relative to site_url)
       feed_description: Latest news and updates from My Awesome Open Source Project
