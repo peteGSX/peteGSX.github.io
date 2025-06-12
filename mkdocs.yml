@@ -1,0 +1,114 @@
+# 1. Site Information
+site_name: MkDocs Initial Testing
+site_url: https://petegsx.github.io/
+site_description: Initial testing of MkDocs for a potential DCC-EX replacement framework
+repo_url: https://github.com/peteGSX/peteGSX.github.io
+repo_name: GitHub
+edit_uri: edit/main/docs/
+
+# 2. Theme Configuration (Material for MkDocs)
+theme:
+  name: material
+  custom_dir: docs/static # Point to your custom CSS/JS/HTML overrides
+  language: en
+  palette: # Define your color scheme
+    # Supports light mode (default) and dark mode (slate)
+    - media: "(prefers-color-scheme: light)" # Light mode
+      scheme: default
+      primary: blue # You can use hex codes like '#2196F3'
+      accent: light blue # You can use hex codes like '#82B1FF'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" # Dark mode
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  features:
+    - navigation.tabs # Top-level navigation as tabs (for context-aware menu)
+    - navigation.sections # Show sections for the current tab in the sidebar
+    - navigation.path # Breadcrumbs for easy navigation
+    - navigation.indexes # Use index.md as section overview pages
+    - toc.integrate # Table of Contents integrated into sidebar
+    - search.highlight # Highlight search results
+    - search.suggest # Provide search suggestions
+    - content.tabs # Markdown tabs for content within pages
+    - content.code.copy # Copy button for code blocks
+    - content.code.annotate # For code annotations
+    - content.tooltips # For tooltips
+  icon: # Optional: Define icons
+    repo: fontawesome/brands/github
+
+# 3. Navigation Structure (Context-aware menu setup)
+# Top-level items are tabs, nested items are sections in the sidebar
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Introduction: getting-started/introduction.md
+      - Installation: getting-started/installation.md
+      - Basic Usage: getting-started/basic-usage.md
+  - Features:
+      - Overview: features/index.md
+      - Feature A: features/feature-a.md
+      - Feature B: features/feature-b.md
+  - Tutorials:
+      - tutorials/index.md
+      - tutorial-1.md
+      - tutorial-2.md
+  - News: news/index.md
+  - Glossary: glossary.md
+  - About: about.md
+
+# 4. Markdown Extensions (for rich content)
+markdown_extensions:
+  - admonition # For callouts (Note, Warning, Tip, etc.)
+  - attr_list # For adding attributes to Markdown elements (e.g., for custom styles)
+  - md_in_html # Allows Markdown syntax inside raw HTML blocks
+  - footnotes # Standard footnotes
+  - pymdownx.details # For collapsible content blocks (e.g., accordions)
+  - pymdownx.caret # For superscript (e.g., I^2^C)
+  - pymdownx.tilde # For subscript (e.g., H~2~O)
+  - pymdownx.mark # For highlighting text ==like this==
+  - pymdownx.critic # For revision markups
+  # - pymdownx.superfences: # Enhanced code blocks
+  #     custom_fence:
+  #       - name: mermaid # For diagrams using Mermaid-JS syntax
+  #         class: mermaid
+  #         format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed: # For creating tabbed content
+      alternate_style: true
+  - pymdownx.highlight: # For syntax highlighting of code
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite # For inline code highlighting
+  - pymdownx.snippets # For including content from other files (simple includes)
+  - toc: # Table of Contents extension
+      permalink: true # Add a permanent link to headings
+
+# 5. Plugins (RSS, Search, Glossary)
+plugins:
+  - search # Built-in client-side search
+  - rss: # RSS Feed for your news section
+      feed_url: /feed.xml # Path to your RSS feed file (relative to site_url)
+      feed_description: Latest news and updates from My Awesome Open Source Project
+      abstract_chars: 200 # Number of characters for the abstract in the feed
+      match_path: 'news/.*' # ONLY include pages under the 'news/' directory
+      pretty_print: true
+      date_from_meta: # Read date from Markdown front matter
+        as_datetime: true
+  # - glossary: # Auto-generated keyword index/glossary
+  #     file: 'glossary.md' # Path to your glossary Markdown file
+
+# 6. Custom CSS/JS
+extra_css:
+  - css/custom.css # For your custom styling and front page layout
+# extra_javascript:
+#   - js/custom.js # For any custom JavaScript
+
+# 7. Copyright Info (Optional)
+copyright: |
+  &copy; 2025 <a href="https://example.com/your-organization" target="_blank" rel="noopener">My Awesome Open Source Project</a>

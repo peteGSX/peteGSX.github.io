@@ -1,0 +1,117 @@
+/* Custom CSS for your project */
+
+/* --- Front Page Hero Section --- */
+.homepage-hero {
+  background: linear-gradient(135deg, var(--md-primary-color) 0%, var(--md-accent-color) 100%);
+  color: white;
+  padding: 8rem 0;
+  text-align: center;
+  margin: -2.2rem -2.2rem 2.2rem; /* Adjust to extend to edges */
+  box-shadow: var(--md-shadow-z2);
+}
+
+.homepage-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.homepage-hero h1 {
+  font-size: 3.5em; /* Larger title */
+  font-weight: 800;
+  margin-bottom: 0.2em;
+  line-height: 1.1;
+  color: white; /* Ensure text is white on colored background */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.homepage-hero .tagline {
+  font-size: 1.5em;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 2em;
+  color: white;
+}
+
+.homepage-hero-actions .md-button {
+  margin: 0 0.5em;
+  font-size: 1.1em;
+  padding: 0.8em 1.5em;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.homepage-hero-actions .md-button--primary {
+  background-color: white;
+  color: var(--md-primary-color);
+  border-color: white;
+}
+
+.homepage-hero-actions .md-button--primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.homepage-hero-actions .md-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.homepage-hero-actions .md-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Feature Cards --- */
+.homepage-features {
+  margin-top: 2rem;
+  padding: 0 1rem; /* Ensure padding on smaller screens */
+}
+
+.feature-card {
+  background-color: var(--md-default-bg-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--md-shadow-z1);
+  transition: all 0.2s ease-in-out;
+  height: 100%; /* Ensure cards are same height in a row */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.feature-card:hover {
+  box-shadow: var(--md-shadow-z3);
+  transform: translateY(-5px);
+}
+
+.feature-card .feature-icon {
+  font-size: 3em;
+  color: var(--md-accent-color);
+  margin-bottom: 0.5em;
+}
+
+.feature-card h3 {
+  font-size: 1.4em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.feature-card p {
+  font-size: 0.9em;
+  color: var(--md-typeset-color--light);
+}
+
+/* Adjust for smaller screens */
+@media screen and (max-width: 76.1875em) {
+  .homepage-hero {
+    padding: 6rem 0;
+    margin: -1.2rem -1.2rem 1.2rem;
+  }
+  .homepage-hero h1 {
+    font-size: 2.5em;
+  }
+  .homepage-hero .tagline {
+    font-size: 1.2em;
+  }
+}
