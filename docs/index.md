@@ -1,4 +1,4 @@
-<div class="homepage-hero">
+<!-- <div class="homepage-hero">
   <div class="homepage-hero-content">
     <h1>🚀 My Awesome Project</h1>
     <p class="tagline">Simplifying your world with cutting-edge open source solutions.</p>
@@ -33,13 +33,15 @@
   </div>
 </div>
 
----
+--- -->
 
-## Welcome to the Documentation!
+# MkDocs Evaluation Pages
 
-This is your central hub for everything related to My Awesome Open Source Project. Whether you're a new user looking to get started, an experienced developer seeking advanced features, or just curious about our latest updates, you'll find the information you need here.
+## Welcome to the Evaluation
 
-### Quick Links
+This repo is simply to evaluate what MkDocs looks like to work with.
+
+<!-- ### Quick Links
 
 * **[Installation Guide](getting-started/installation.md)**: Get your project up and running in minutes.
 * **[Latest News](news/)**: Stay informed about new releases, features, and community updates.
@@ -47,4 +49,4 @@ This is your central hub for everything related to My Awesome Open Source Projec
 
 <p align="center">
   <img src="img/example-diagram.svg" alt="Example Project Diagram" width="600" />
-</p>
+</p> -->
